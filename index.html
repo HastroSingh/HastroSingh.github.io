@@ -12,7 +12,7 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      transition: background-color 0.3s ease; /* Add transition for smooth color change */
+      transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
       margin: 0;
     }
 
@@ -32,6 +32,14 @@
 
     .light-mode .card {
       background-color: #f0f0f0; /* Light mode container background */
+    }
+
+    .light-mode h1, 
+    .light-mode .position, 
+    .light-mode .material-icons, 
+    .light-mode a, 
+    .light-mode .contact-item span {
+      color: #181818; /* Ensure all text turns black in light mode */
     }
 
     .logo {
@@ -56,15 +64,20 @@
     }
 
     .contact-item {
-      margin-bottom: 15px;
+      margin-bottom: 18px;
       display: flex;
       align-items: center;
     }
 
     .contact-item a {
-      color: #FFFFFF; /* Green color */
+      color: #FFFFFF; /* Default green in dark mode */
       text-decoration: none;
       margin-left: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .contact-item a:hover {
+      color: #007bff; /* Blue color on hover */
     }
 
     .material-icons {
@@ -92,7 +105,7 @@
     <a href="https://www.flik.in/">
       <img src="logo.png" alt="Flik Logo" class="logo"> 
     </a>
-    <h1 style="color: inherit;">Harsh Deep Singh</h1> 
+    <h1>Harsh Deep Singh</h1> 
     <p class="position">Chief Technical Officer</p> 
 
     <ul class="contact-list">
