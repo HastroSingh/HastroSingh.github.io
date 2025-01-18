@@ -4,6 +4,7 @@
   <title>Harsh Deep Singh</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
+    /* General Styles */
     body {
       background-color: #181818; /* Dark background color */
       color: #fff; /* Light text color */
@@ -14,6 +15,7 @@
       min-height: 100vh;
       transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
       margin: 0;
+      padding: 0;
     }
 
     .card {
@@ -64,7 +66,7 @@
     }
 
     .contact-item {
-      margin-bottom: 18px;
+      margin-bottom: 15px;
       display: flex;
       align-items: center;
     }
@@ -95,6 +97,49 @@
       border-radius: 50%;
       padding: 5px;
       cursor: pointer;
+    }
+
+    /* Responsive Styles for Mobile */
+    @media (max-width: 768px) {
+      .card {
+        width: 90%; /* Makes card take up more space on smaller screens */
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .position {
+        font-size: 1.1rem;
+      }
+
+      .contact-item a {
+        font-size: 1rem;
+      }
+
+      .material-icons {
+        font-size: 22px;
+      }
+    }
+
+    /* Responsive Styles for Phones */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      .position {
+        font-size: 1rem;
+      }
+
+      .contact-item a {
+        font-size: 0.9rem;
+      }
+
+      .material-icons {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
