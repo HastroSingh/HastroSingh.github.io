@@ -4,22 +4,25 @@
     <title>Harsh Deep Singh</title>
     <style>
         body {
-            background-color: #333; /* Dark background color */
+            background-color: #181818; /* Darker background for a modern feel */
             color: #fff; /* Light text color */
-            font-family: sans-serif;
-            text-align: center;
+            font-family: 'Montserrat', sans-serif; /* Modern font */
+            display: flex; /* Center content vertically and horizontally */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Make the page fill the viewport height */
         }
 
         .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #555;
-            border-radius: 5px;
+            background-color: #282828; /* Slightly lighter container background */
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         h1 {
             margin-bottom: 20px;
+            font-size: 2rem;
         }
 
         .contact-info {
@@ -29,6 +32,11 @@
         .contact-info a {
             color: #fff;
             text-decoration: none;
+            transition: color 0.3s ease; /* Add smooth color transition */
+        }
+
+        .contact-info a:hover {
+            color: #007bff; /* Change link color on hover */
         }
 
         .social-links {
@@ -39,6 +47,11 @@
             margin: 0 10px;
             color: #fff;
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
         }
     </style>
 </head>
