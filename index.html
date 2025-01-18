@@ -1,98 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Harsh Deep Singh</title>
-    <style>
-        body {
-            background-color: #181818; /* Dark background color */
-            color: #fff; /* Light text color */
-            font-family: 'Montserrat', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            transition: background-color 0.3s ease; /* Add transition for smooth color change */
-            background-image: url("data:image/svg+xml,<svg width='100%' height='100%' viewBox='0 0 100 100' preserveAspectRatio='none'><path d='M0 0 L100 100' fill='none' stroke='#282828' stroke-width='2' stroke-linecap='round' /></svg>"); /* Subtle diagonal lines pattern */
-        }
+  <title>Harsh Deep Singh</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      background-color: #181818; /* Dark background color */
+      color: #fff; /* Light text color */
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      transition: background-color 0.3s ease; /* Add transition for smooth color change */
+      margin: 0;
+    }
 
-        .container {
-            background-color: #282828; /* Darker container background */
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease; /* Add transition for smooth color change */
-            text-align: left; /* Left-align content */
-        }
+    .card {
+      background-color: #282828; /* Darker container background */
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      width: 300px; /* Adjust width as needed */
+      text-align: center;
+    }
 
-        .light-mode {
-            background-color: #fff; /* Light mode background */
-            color: #181818; /* Light mode text color */
-            background-image: url("data:image/svg+xml,<svg width='100%' height='100%' viewBox='0 0 100 100' preserveAspectRatio='none'><path d='M0 100 L100 0' fill='none' stroke='#ddd' stroke-width='2' stroke-linecap='round' /></svg>"); /* Subtle diagonal lines pattern for light mode */
-        }
+    .light-mode {
+      background-color: #fff; /* Light mode background */
+      color: #181818; /* Light mode text color */
+    }
 
-        .light-mode .container {
-            background-color: #f0f0f0; /* Light mode container background */
-        }
+    .light-mode .card {
+      background-color: #f0f0f0; /* Light mode container background */
+    }
 
-        .light-mode .container h1, 
-        .light-mode .container .contact-info a {
-            color: #181818; /* Set text color for light mode */
-        }
+    .logo {
+      width: 220px; /* Adjust logo size as needed */
+      margin-bottom: 0px;
+    }
 
-        h1 {
-            margin-bottom: 20px;
-            font-size: 2rem;
-        }
+    h1 {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
 
-        .logo-container {
-            text-align: center; /* Center the logo */
-            margin-bottom: 20px;
-        }
+    .position {
+      font-size: 1.3rem;
+      color: #999;
+      margin-bottom: 15px;
+    }
 
-        .logo-container a {
-            display: block; /* Make the logo container a block element */
-        }
+    .contact-list {
+      list-style: none;
+      padding: 0;
+    }
 
-        .logo-container img {
-            max-width: 100px; /* Adjust logo size as needed */
-        }
+    .contact-item {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
 
-        .contact-info {
-            margin-bottom: 15px;
-            display: flex; /* Use flexbox for better icon alignment */
-            align-items: center; /* Center icons vertically */
-        }
+    .contact-item a {
+      color: #FFFFFF; /* Green color */
+      text-decoration: none;
+      margin-left: 10px;
+    }
 
-        .contact-info a {
-            color: #fff; /* Link color in dark mode */
-            text-decoration: none;
-            transition: color 0.3s ease;
-            margin-left: 10px; /* Add spacing between icon and text */
-        }
+    .material-icons {
+      font-size: 18px;
+      color: #77dd77; /* Green color */
+    }
 
-        .contact-info a:hover {
-            color: #007bff; /* Link color on hover */
-        }
+    .toggle-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #fff; /* Button background */
+      color: #181818; /* Button text color */
+      border: none;
+      border-radius: 50%;
+      padding: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-button" id="theme-toggle">☀️</button>
 
-        .light-mode .contact-info a {
-            color: #181818; /* Link color in light mode */
-        }
+  <div class="card">
+    <a href="https://www.flik.in/">
+      <img src="logo.png" alt="Flik Logo" class="logo"> 
+    </a>
+    <h1 style="color: inherit;">Harsh Deep Singh</h1> 
+    <p class="position">Chief Technical Officer</p> 
 
-        .light-mode .contact-info a:hover {
-            color: #007bff; /* Link color on hover in light mode */
-        }
+    <ul class="contact-list">
+      <li class="contact-item">
+        <span class="material-icons">phone</span> 
+        <a href="tel:+918618297513">+91 8618297513</a> 
+      </li>
+      <li class="contact-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp logo" width="18px" height="18px"> 
+        <a href="https://wa.me/918618297513">+91 8618297513</a> 
+      </li>
+      <li class="contact-item">
+        <span class="material-icons">email</span>
+        <a href="mailto:contact@flik.in">contact@flik.in</a>
+      </li>
+      <li class="contact-item">
+        <span class="material-icons">language</span>
+        <a href="https://www.flik.in">flik.in</a>
+      </li>
+      <li class="contact-item">
+        <span class="material-icons">language</span>
+        <a href="https://microsite.flik.in">microsite.flik.in</a>
+      </li>
+    </ul>
 
-        .icon {
-            width: 20px; /* Adjust icon size as needed */
-            height: 20px;
-            margin-right: 5px; /* Add spacing between icon and text */
-        }
+  </div>
 
-        .phone-icon {
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'><path d='M6.62 10.79c1.44 2.04 3.4 3.7 5.64 4.86-1.44-2.04-3.4-3.7-5.64-4.86m0 7.92c1.44 2.04 3.4 3.7 5.64 4.86-1.44-2.04-3.4-3.7-5.64-4.86m0-7.92"/></svg>");
-            background-size: cover;
-            display: inline-block;
-        }
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const body = document.querySelector('body');
 
-        .whatsapp-icon {
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'><path d='M20.1 3.9C17.9 1.7 15.3 1 12.6 1c-2.7 0-5.4 0.7-7.5 2-1 1-1.4 2.3-1.4 3.7 0 2 1 3.9 2.1 5.4 0.1 0.2 0.2 0.4 0.2 0.6 0 2.3 1 4.3 1.9 6.1 0.6 0.8 1.4 1.4 2.3 1.8 0.3 0.2 0.5 0.2 0.8 0.1 1.4-0.6 2.8-1.4 4-2.3-0.2-0.3-0.4-0.7-0.6-1.1-0.2-0.3-0.4-0.7-0.6-1.1l-2.2-3.1c-0.2-0.3-0.4-0.6-0.7-0.9-0.3-0.3-0.5-0.6-0.8-0.9-0.3-0.2-0.6-0.5-0.9-0.7-0.3-0.3-0.6-0.5-1-0.7-0.3-0.2-0.7-0.4-1-0.7-0.2-0.2-0.5-0.5-0.7-0.7-0.3-0.3-0.5-0.6-0.8-0.9-0.3-0.2-0.6-0.5-0.9-0.7-0.3-0.2-0.6-0.4-1-0.6-0.4-0.2-0.7-0.4-1.1-0.6-0.3-0.2-0.7-0.4-1-0.6-0.2-0.1-0.5-0.3-0.7-0.4-0.3-0.1-0.6-0.2-0.9-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.2-0.9-0.3-0.2-0.1-0.4-0.2-0.7-0.3-0.3-0.1-0.6-0.2-0.9-0.3-0.2-0.1-0.5-0.2-0.7-0.3s-0.5-0.2-0.8-0.3c-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.2-0.9-0.3-0.2-0.1-0.5-0
+    themeToggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+
+      const buttonText = body.classList.contains('light-mode') ? '🌙' : '☀️';
+      themeToggleBtn.textContent = buttonText;
+    });
+  </script>
+</body>
+</html>
