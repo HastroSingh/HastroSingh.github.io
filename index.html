@@ -1,138 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harsh Deep Singh</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
     body {
-      background-color: #181818; /* Dark background color */
-      color: #fff; /* Light text color */
+      background-color: #181818;
+      color: #fff;
       font-family: 'Montserrat', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      transition: background-color 0.3s ease, color 0.3s ease;
       margin: 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .card {
-      background-color: #282828; /* Darker container background */
+      background-color: #282828;
       border-radius: 10px;
       padding: 30px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      width: 300px; /* Adjust width as needed */
+      width: 90%;
+      max-width: 400px;
       text-align: center;
     }
 
     .light-mode {
-      background-color: #fff; /* Light mode background */
-      color: #181818; /* Light mode text color */
+      background-color: #fff;
+      color: #181818;
     }
 
     .light-mode .card {
-      background-color: #f0f0f0; /* Light mode container background */
+      background-color: #f0f0f0;
     }
 
-    .light-mode h1, 
-    .light-mode .position, 
-    .light-mode a, 
-    .light-mode .material-icons, 
+    .light-mode h1,
+    .light-mode .position,
+    .light-mode a,
+    .light-mode .material-icons,
     .light-mode .contact-item span {
-      color: #181818 !important; /* Ensure all text turns black in light mode */
+      color: #181818 !important;
     }
 
     .light-mode a:hover {
-      color: #007bff; /* Blue color on hover */
+      color: #007bff;
     }
 
     .logo {
-      width: 220px; /* Adjust logo size as needed */
-      margin-bottom: 0px;
+      width: 100%;
+      max-width: 220px;
+      margin-bottom: 20px;
     }
 
     h1 {
       margin-bottom: 10px;
       font-size: 1.8rem;
+      text-align: center; /* Center the name */
     }
 
     .position {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: #999;
       margin-bottom: 15px;
+      text-align: center; /* Center the designation */
     }
 
     .contact-list {
       list-style: none;
       padding: 0;
+      text-align: left; /* Align content to the left */
     }
 
     .contact-item {
       margin-bottom: 15px;
       display: flex;
       align-items: center;
+      justify-content: flex-start; /* Align items to the left */
     }
 
     .contact-item a {
-      color: #FFFFFF; /* Default green in dark mode */
+      color: #FFFFFF;
       text-decoration: none;
       margin-left: 10px;
+      font-size: 1rem;
       transition: color 0.3s ease;
     }
 
     .contact-item a:hover {
-      color: #007bff; /* Blue color on hover */
+      color: #007bff;
+    }
+
+    .contact-item span,
+    .contact-item img {
+      margin-right: 10px; /* Add spacing between icon and text */
     }
 
     .material-icons {
       font-size: 18px;
-      color: #77dd77; /* Green color */
+      color: #77dd77;
     }
 
     .toggle-button {
-      position: absolute;
+      position: fixed;
       top: 20px;
       right: 20px;
-      background-color: #fff; /* Button background */
-      color: #181818; /* Button text color */
+      background-color: #fff;
+      color: #181818;
       border: none;
       border-radius: 50%;
-      padding: 5px;
+      padding: 10px;
       cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
-    /* Responsive Styles for Mobile */
     @media (max-width: 768px) {
-      .card {
-        width: 90%; /* Makes card take up more space on smaller screens */
-        padding: 20px;
-      }
-
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
 
       .position {
         font-size: 1.1rem;
-      }
-
-      .contact-item a {
-        font-size: 1rem;
-      }
-
-      .material-icons {
-        font-size: 22px;
-      }
-    }
-
-    /* Responsive Styles for Phones */
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.2rem;
-      }
-
-      .position {
-        font-size: 1rem;
       }
 
       .contact-item a {
@@ -142,6 +132,33 @@
       .material-icons {
         font-size: 20px;
       }
+
+      .toggle-button {
+        top: 10px;
+        right: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      .position {
+        font-size: 1rem;
+      }
+
+      .contact-item a {
+        font-size: 0.8rem;
+      }
+
+      .material-icons {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
@@ -150,19 +167,19 @@
 
   <div class="card">
     <a href="https://www.flik.in/">
-      <img src="logo.png" alt="Flik Logo" class="logo"> 
+      <img src="logo.png" alt="Flik Logo" class="logo">
     </a>
-    <h1>Harsh Deep Singh</h1> 
-    <p class="position">Chief Technical Officer</p> 
+    <h1>Harsh Deep Singh</h1>
+    <p class="position">Chief Technical Officer</p>
 
     <ul class="contact-list">
       <li class="contact-item">
-        <span class="material-icons">phone</span> 
-        <a href="tel:+918618297513">+91 8618297513</a> 
+        <span class="material-icons">phone</span>
+        <a href="tel:+918618297513">+91 8618297513</a>
       </li>
       <li class="contact-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp logo" width="18px" height="18px"> 
-        <a href="https://wa.me/918618297513">+91 8618297513</a> 
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp logo" width="18px" height="18px">
+        <a href="https://wa.me/918618297513">+91 8618297513</a>
       </li>
       <li class="contact-item">
         <span class="material-icons">email</span>
@@ -177,7 +194,6 @@
         <a href="https://microsite.flik.in">microsite.flik.in</a>
       </li>
     </ul>
-
   </div>
 
   <script>
